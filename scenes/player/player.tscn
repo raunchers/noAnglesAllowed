@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs55fct1mqex0"]
+
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_dx7sm"]
+[ext_resource type="Texture2D" uid="uid://13s75f0dxapc" path="res://assets/kenney_board-game-icons/PNG/Default (64px)/timer_CCW_50.png" id="2_ohelf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wb4ch"]
+radius = 16.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_dx7sm")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ohelf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wb4ch")
+
+[node name="Camera2D" type="Camera2D" parent="."]

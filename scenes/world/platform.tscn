@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://v50mb2yv4ueq"]
+
+[ext_resource type="Texture2D" uid="uid://dnyd2ktnth47i" path="res://assets/kenney_board-game-icons/PNG/Default (64px)/dice_empty.png" id="1_bcw8u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k7odl"]
+size = Vector2(64, 64)
+
+[node name="platform" type="StaticBody2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bcw8u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k7odl")

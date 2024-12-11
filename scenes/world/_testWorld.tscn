@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2ofddj76n4uj"]
+
+[ext_resource type="PackedScene" uid="uid://v50mb2yv4ueq" path="res://scenes/world/platform.tscn" id="1_q65qe"]
+[ext_resource type="PackedScene" uid="uid://bs55fct1mqex0" path="res://scenes/player/player.tscn" id="2_k4sjw"]
+[ext_resource type="PackedScene" uid="uid://cyin8grl62gyc" path="res://scenes/enemies/squareEnemy.tscn" id="3_an2ck"]
+
+[node name="testWorld" type="Node2D"]
+
+[node name="platform" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(160, 352)
+
+[node name="platform2" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(224, 352)
+
+[node name="platform3" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(288, 352)
+
+[node name="platform4" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(352, 352)
+
+[node name="platform5" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(416, 352)
+
+[node name="platform6" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(480, 352)
+
+[node name="platform7" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(544, 352)
+
+[node name="platform8" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(672, 352)
+
+[node name="platform9" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(736, 352)
+
+[node name="platform10" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(800, 352)
+
+[node name="platform11" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(864, 352)
+
+[node name="platform12" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(928, 352)
+
+[node name="platform13" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(992, 352)
+
+[node name="platform14" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(1056, 352)
+
+[node name="platform15" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(1120, 352)
+
+[node name="platform16" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(32, 352)
+
+[node name="platform18" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(32, 288)
+
+[node name="platform19" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(1120, 288)
+
+[node name="platform17" parent="." instance=ExtResource("1_q65qe")]
+position = Vector2(96, 352)
+
+[node name="squareEnemy" parent="." instance=ExtResource("3_an2ck")]
+position = Vector2(1048, 288)
+
+[node name="Player" parent="." instance=ExtResource("2_k4sjw")]
+position = Vector2(152, 304)
+
+[connection signal="damage_to_player" from="squareEnemy" to="Player" method="_on_square_enemy_damage_to_player"]
